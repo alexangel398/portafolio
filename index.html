@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>AlexAngel.dev </title>
+    <!-- 2. Aquí agregas tu logo (reemplaza 'img/tu-logo.png' por el nombre real de tu imagen) -->
+    <link rel="icon" href="img/AAr.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+
+
+    <!-- Evita el "flash" blanco al cargar si el tema guardado es oscuro -->
+    <script>
+        (function () {
+            const t = localStorage.getItem("theme");
+            if (t) document.documentElement.setAttribute("data-theme", t);
+        })();
+    </script>
+</head>
+
+<body>
+
+    <!-- ============================== NAV ============================== -->
+    <nav>
+        <div class="wrap">
+            <a class="brand" href="#top">
+                <img src="img/AAr.png" alt="ASG.dev Logo" class="nav-logo">
+            </a>
+            <ul class="navlinks">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#stack">Stack</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema"
+                    aria-pressed="false" data-hover>
+                    <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41">
+                        </path>
+                    </svg>
+                    <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+                    </svg>
+                </button>
+
+                <button class="menu-toggle btn" id="menuToggle" type="button" aria-label="Abrir menú"
+                    aria-expanded="false" aria-controls="mobileMenu">
+                    <svg class="menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================== MENÚ MÓVIL ============================== -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-inner wrap">
+            <div class="mobile-menu-top">
+                <span class="mobile-menu-label">Navegación</span>
+                <button class="close-toggle btn" id="closeToggle" type="button" aria-label="Cerrar menú">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+
+            <ul class="mobile-navlinks">
+                <li><a href="#about">Sobre mí<span>01</span></a></li>
+                <li><a href="#stack">Stack<span>02</span></a></li>
+                <li><a href="#trayectoria">Trayectoria<span>03</span></a></li>
+                <li><a href="#proyectos">Proyectos<span>04</span></a></li>
+                <li><a href="#contacto">Contacto<span>05</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ============================== HERO ============================== -->
+    <header class="hero" id="top">
+        <div class="wrap">
+            <div>
+                <h1 class="hero-title"><span class="neon-role">Desarrollador Fullstack</span> | Analista en Sistemas</h1>
+                <p class="lede">Desarrollo software enfocado en resolver problemas reales, impulsando la digitalización
+                    de negocios con soluciones escalables.</p>
+
+                <div class="cta-row">
+                    <a class="btn btn-primary" href="#proyectos" data-hover>Ver proyectos<div data-hover-bounds></div>
+                    </a>
+                    <a class="btn btn-ghost" href="#contacto" data-hover>Contactarme<div data-hover-bounds></div></a>
+                </div>
+
+                <div class="tech-stack">
+                    <!-- MongoDB -->
+                    <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+
+                    <!-- Express.js -->
+                    <i class="devicon-express-original" title="Express.js"></i>
+
+                    <!-- React -->
+                    <i class="devicon-react-original colored" title="React"></i>
+
+                    <!-- Node.js -->
+                    <i class="devicon-nodejs-plain colored" title="Node.js"></i>
+
+                    <!-- Python -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python"
+                        title="Python" class="tech-img">
+
+                    <!-- Django -->
+                    <i class="devicon-django-plain" title="Django"></i>
+
+                    <!-- SQL Server -->
+                    <i class="devicon-microsoftsqlserver-plain colored" title="SQL Server"></i>
+                </div>
+            </div>
+
+            <div class="code-widget global-typewriter">
+                <!-- Brillos de fondo -->
+                <div class="glow glow-purple"></div>
+                <div class="glow glow-teal"></div>
+
+                <!-- Cabecera macOS -->
+                <div class="widget-header">
+                    <div class="mac-buttons">
+                        <span class="btn-mac close"></span>
+                        <span class="btn-mac minimize"></span>
+                        <span class="btn-mac maximize"></span>
+                    </div>
+                    <div class="widget-tabs">
+                        <span class="tab active-tab">main.js</span>
+                        <span class="tab inactive-tab">styles.css</span>
+                    </div>
+                </div>
+
+                <!-- Cuerpo del Código (Simplificado para evitar dispersión) -->
+                <div class="code-body" id="code-content"></div>
+
+                <!-- Pie de tarjeta -->
+                <div class="widget-footer">
+                    <h3 class="widget-title">Creative Code</h3>
+                    <div class="badges">
+                        <span class="badge">CSS</span>
+                        <span class="badge">JS</span>
+                        <span class="badge">IA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================== SOBRE MÍ ============================== -->
+    <section id="about">
+        <div class="wrap about-grid">
+            <div>
+                <div class="eyebrow">Sobre mí</div>
+                <h2 style="margin-bottom:20px;">Sistemas escalables y decisiones basadas en datos</h2>
+                <p>Soy Analista de Sistemas de información (NSLP) y estudiante
+                    de Tecnologías Digitales & Datos (UNICABA), con base técnica
+                    en desarrollo
+                    fullstack y análisis de datos. </p>
+                <p>Traduzco los requerimientos del negocio en sistemas robustos, asegurando que cada línea de código y
+                    cada análisis de métricas aporte valor directo al crecimiento.</p>
+            </div>
+
+            <div class="about-image">
+                <!-- Reemplaza "ruta/a/tu-foto.jpg" con el nombre real de tu archivo de imagen -->
+                <img src="img/fotcv.jpeg" alt="Alex Surco - Desarrollador y Analista" class="profile-photo">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== STACK ============================== -->
+    <section id="stack" class="modern-section"
+        style="background:var(--bg-panel); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+        <div class="wrap split-layout">
+
+            <!-- COLUMNA IZQUIERDA: Stack y Tecnologías -->
+            <div class="left-col">
+                <div class="eyebrow">Stack técnico</div>
+                <h2>Desarrollo & Arquitectura</h2>
+                <p class="section-desc">Elijo la herramienta adecuada para cada problema, trabajando cómodamente en
+                    diferentes capas del sistema.</p>
+
+                <div class="accordion">
+                    <!-- Solapa 1: Frontend (Abierta por defecto) -->
+                    <div class="accordion-item active">
+                        <button class="accordion-header">
+                            Frontend
+                            <span class="icon-arrow">▼</span>
+                        </button>
+                        <div class="accordion-content" style="max-height: 500px;">
+                            <div class="tech-grid">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                                    alt="React" title="React" class="tech-img">
+                                <!-- JavaScript (SVG oficial y nítido) -->
+                                <!-- JavaScript (Cambiado a formato PNG directo y seguro) -->
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                                    alt="JavaScript" title="JavaScript" class="tech-img">
+                                <!-- HTML5 (Escudo limpio) -->
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                                    alt="HTML5" title="HTML5" class="tech-img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS3"
+                                    title="CSS3" class="tech-img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg"
+                                    alt="Bootstrap" title="Bootstrap" class="tech-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solapa 2: Backend -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Backend
+                            <span class="icon-arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="tech-grid">
+                                <!-- Express.js (Isotipo "ex" adaptativo claro/oscuro) -->
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
+                                    alt="Express.js" title="Express.js" class="tech-img"
+                                    style="filter: brightness(0) invert(var(--express-inv, 0));">
+                                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"
+                                    alt="Node.js" title="Node.js" class="tech-img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                    alt="Python" title="Python" class="tech-img">
+                                <!-- Django (Isotipo "dj" con contenedor adaptativo) -->
+                                <div class="tech-icon-wrapper" title="Django">
+                                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg"
+                                        alt="Django" class="tech-img">
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"
+                                    alt="ASP.NET" title="ASP.NET" class="tech-img">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solapa 3: Bases de Datos -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Bases de Datos
+                            <span class="icon-arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="tech-grid">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
+                                    alt="SQL Server" title="SQL Server" class="tech-img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
+                                    alt="PostgreSQL" title="PostgreSQL" class="tech-img">
+                                <!-- MongoDB (Solo la hojita) -->
+                                <i class="devicon-mongodb-plain colored" title="MongoDB"
+                                    style="font-size: 3.2rem; display: inline-flex; justify-content: center; align-items: center;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Solapa 4: Datos & Análisis -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Datos & Análisis
+                            <span class="icon-arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="tech-grid">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg"
+                                    alt="Jupyter" title="Jupyter" class="tech-img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg"
+                                    alt="Pandas" title="Pandas" class="tech-img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"
+                                    alt="Power BI" title="Power BI" class="tech-img">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg"
+                                    alt="Excel" title="Excel" class="tech-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA: Formación y Certificaciones -->
+            <div class="right-col">
+                <div class="eyebrow">Trayectoria</div>
+                <h2>Formación & Certificaciones</h2>
+
+                <div class="timeline">
+                    <!-- Item 1 (UNICABA) -->
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <img src="img/unicaba.png" alt="Logo UNICABA">
+                        </div>
+                        <div class="timeline-content">
+                            <span class="date-badge">En curso (12/15 materias)</span>
+                            <h3>Licenciatura en Tecnologías Digitales & Datos</h3>
+                            <p>Universidad de la Ciudad de Buenos Aires (UNICABA)</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 (EducaciónIT + pescar) -->
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <img src="img/pescar.jpg" alt="Logo Fundación Pescar">
+                        </div>
+                        <div class="timeline-content">
+                            <span class="date-badge">Graduado, 2026</span>
+                            <h3>Desarrollo Web Full Stack</h3>
+                            <p>EducaciónIT | Fundación Pescar</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 (NSLP) -->
+                    <div class="timeline-item">
+                        <div class="timeline-logo">
+                            <img src="img/nslp.png" alt="Logo NSLP">
+                        </div>
+                        <div class="timeline-content">
+                            <span class="date-badge">Graduado, 2021-2024</span>
+                            <h3>Analista de Sistemas de Información</h3>
+                            <p>Instituto Superior Nuestra Señora de La Paz (NSLP)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================== TRAYECTORIA ============================== -->
+    <section id="trayectoria">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="eyebrow">Trayectoria</div>
+                <h2>Experiencia Laboral</h2>
+                <p>Mi trayectoria se forjó en la operación real: desde el retail y la salud pública, hasta la logística
+                    de alta demanda (Warehousing). Haber interactuado con sistemas POS y WMS desde adentro me permite
+                    hoy desarrollar software y analizar datos entendiendo exactamente qué necesita el usuario final y el
+                    negocio.</p>
+
+            </div>
+
+            <div class="timeline">
+                <div class="tl-item">
+                    <span class="tl-tag work">Experiencia</span>
+                    <h4>Analista Warehousing - ELO PAAQ</h4>
+                    <div class="tl-period">May 2026 - Actualidad</div>
+                    <p>Transformo el flujo operativo en datos accionables operando el sistema WMS/TMS Presis. Gestiono
+                        bases de datos de envíos, monitoreo SLAs logísticos a travez de Power BI y realizo auditorías de
+                        aforo para optimizar la trazabilidad y la toma de decisiones en el entorno logístico.</p>
+                </div>
+
+                <div class="tl-item">
+                    <span class="tl-tag work">Experiencia</span>
+                    <h4>Soporte de sistemas y operaciones - Café Martínez</h4>
+                    <div class="tl-period">Ene 2026 - Jul 2026</div>
+                    <p>Nexo técnico entre la tecnología y el negocio retail. Soporte al sistema POS Clover, gestión de
+                        inventarios y relevamiento de necesidades operativas para proponer mejoras directas en el flujo
+                        de comandas.</p>
+                </div>
+
+                <div class="tl-item">
+                    <span class="tl-tag work">Experiencia</span>
+                    <h4>Implementador de Sistemas - Ministerio de Salud (DGSISAN)</h4>
+                    <div class="tl-period">Ene 2025 - Dic 2025</div>
+                    <p>Implementación y soporte de sistemas clínicos (SIGEHOS) en entornos críticos. Resolución de
+                        incidencias en terreno, relevamiento de requerimientos técnicos y capacitación a equipos de
+                        salud para asegurar la adopción integral del software.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================== PROYECTOS ============================== -->
+    <section id="proyectos">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="eyebrow">Proyectos</div>
+                <h2>De la práctica a sistemas reales</h2>
+
+            </div>
+
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-filter="all" data-hover>Todos<div data-hover-bounds></div>
+                </button>
+                <button class="filter-btn" data-filter="datos" data-hover>En desarollo<div data-hover-bounds></div>
+                </button>
+                </button>
+            </div>
+
+            <div class="proj-grid" id="projGrid">
+
+                <div class="proj-card" data-cat="fullstack">
+                    <div class="proj-top"><span class="proj-cat">Desarrollo Full-stack</span>
+
+                        <a href="https://sportconnects.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <img src="img/world.png" class="redirect-logo" alt="Logo de SportConnect" width="30"
+                                height="30" style="object-fit: contain; border-radius: 4px;">
+                        </a>
+                    </div>
+                    <h3>SportConnect</h3>
+                    <p>Plataforma de reserva de canchas deportivas: búsqueda, disponibilidad, reserva y panel de
+                        gestión. Backend con arquitectura en capas (Model → DAO → Service → Controller → Router).</p>
+                    <div class="proj-badges">
+                        <span>React</span><span>Express</span><span>Node.js</span><span>MongoDB</span>
+                    </div>
+                </div>
+
+                <div class="proj-card" data-cat="datos">
+                    <div class="proj-top"><span class="proj-cat">Desarrollo Backend</span><span class="proj-status">En
+                            desarrollo</span></div>
+                    <h3>Sistema de Gestión — Distribuidora</h3>
+                    <p>Sistema de gestión comercial construido desde cero: clientes, productos, stock con historial de
+                        movimientos, pedidos y dashboard, con foco en modelado de datos y buenas prácticas de analista
+                        de sistemas.</p>
+                    <div class="proj-badges"><span>Python</span><span>Django</span><span>PostgreSQL</span></div>
+                </div>
+
+                <div class="proj-card" data-cat="freelance">
+                    <div class="proj-top"><span class="proj-cat">Diseño Web</span></div>
+                    <h3>Casa Mica</h3>
+                    <p>Sitio de catálogo para una mercería de Lugano, CABA — primer proyecto como desarrollador
+                        freelance, con foco en captación de clientes vía WhatsApp.</p>
+                    <div class="proj-badges"><span>WordPress</span><span>Elementor</span><span>WooCommerce</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================== FRASE / CALL TO ACTION ============================== -->
+    <section id="vision" class="inspirational-section">
+        <!-- Capa negra semi-transparente -->
+        <div class="dark-overlay"></div>
+
+        <div class="wrap quote-container">
+            <!-- Elige la frase que más te guste de las opciones de abajo -->
+            <h2 class="quote-text">"Todo empieza con un negocio que confía en la memoria y el instinto. Yo agrego lo que
+                falta: sistema, datos y control real."</h2>
+            <div class="quote-line"></div>
+
+
+        </div>
+    </section>
+
+
+    <!-- ============================== CONTACTO ============================== -->
+    <section id="contacto">
+        <div class="wrap">
+            <div class="contact-wrapper">
+
+                <!-- COLUMNA IZQUIERDA: Tu información original -->
+                <div class="contact-info">
+                    <h2>¿Charlamos?</h2>
+                    <p>Transformemos tus ideas en software real. Escríbeme y diseñemos la solución tecnológica que tu
+                        negocio necesita.</p>
+
+                    <div class="contact-links">
+                        <!-- Correo -->
+                        <a href="mailto:alexangel398@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="lbl">Correo</span>
+                                alexangel398@gmail.com
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/angel-surco/" target="_blank" rel="noopener"
+                            class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="lbl">LinkedIn</span>
+                                linkedin.com/in/angel-surco/
+                            </div>
+                        </a>
+
+                        <!-- Ubicación -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="contact-text">
+                                <span class="lbl">Ubicación</span>
+                                Lugano, CABA, Argentina
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: El nuevo formulario -->
+                <div class="contact-form-container">
+                    <form class="contact-form" id="whatsapp-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nombre / Empresa</label>
+                                <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo</label>
+                                <input type="email" id="email" name="email" placeholder="correo@gmail.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">¿De qué trata tu consulta?</label>
+                            <select id="subject" name="subject">
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="empleo">Propuesta Laboral </option>
+                                <option value="freelance">Servicios</option>
+                                <option value="networking">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="¡Hola Alex! Me gustaría hablar contigo sobre un proyecto para..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Enviar Mensaje
+                            <span class="btn-icon">
+                                <span class="btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" style="vertical-align: middle;">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </span>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer>© 2026 Portafolio personal.</footer>
+
+    <!-- Cursor magnético (solo visible en desktop) -->
+    <div class="cursor" aria-hidden="true"></div>
+
+    <script type="module" src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    const item = this.parentElement;
+                    const content = this.nextElementSibling;
+                    const isActive = item.classList.contains('active');
+
+                    // Cierra todos los acordeones primero (Opcional, para que solo haya uno abierto)
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = null;
+                    });
+
+                    // Si no estaba activo, ábrelo
+                    if (!isActive) {
+                        item.classList.add('active');
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1847,3 +1847,47 @@ h1 {
         overflow-x: auto !important;
     }
 }
+
+/* ================================================================
+   BOTÓN DE DESCARGA DE CV (NAVBAR)
+================================================================= */
+.btn-cv-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    text-decoration: none;
+    border-radius: 8px;
+    color: var(--heading);
+    background: var(--chip-bg);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-cv-header:hover {
+    background: var(--bg-panel);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.btn-cv-header svg {
+    width: 16px;
+    height: 16px;
+    stroke: var(--accent);
+    stroke-width: 2.2;
+}
+
+/* Responsivo para pantallas muy pequeñas: deja solo el ícono */
+@media (max-width: 480px) {
+    .btn-cv-header span {
+        display: none;
+    }
+    .btn-cv-header {
+        padding: 6px 8px;
+    }
+}
